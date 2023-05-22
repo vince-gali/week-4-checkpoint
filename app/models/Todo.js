@@ -42,10 +42,7 @@ export class Todo {
     static CreateTodoButton(){
         return /*html*/ `
         <div class="col-6 ps-5">
-        <div>
-  
-          Todos Remaining: <span id="total">0</span>
-        </div>
+        
       <form action="" onsubmit="app.TodoController.createTodo()">
         <label for="Todo"></label> 
         <input type="text" name="description" placeholder="Add todo">

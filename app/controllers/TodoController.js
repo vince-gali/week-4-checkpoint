@@ -32,12 +32,17 @@ function _drawTodo(){
    
 }
 
-// function _drawRemaining(){
-//     let template = /*html*/ ` <div>
-//   Remaining ${AppState.todos.filter(t => t.completed).length}
-//     Todos Remaining: <span id="total">0</span>
-//   </div>`
-//   }
+function _drawRemaining(){
+    let template =  /*html*/ ` 
+    <div>
+  Remaining: ${AppState.todos.filter(t => t.completed==false).length}
+    
+  </div>`
+  AppState.todos.forEach( t => {
+    template += t.TodoListTemplate
+  })
+  setHTML('todoList', template)
+  }
 
 export class TodoController{
     constructor(){
@@ -46,7 +51,7 @@ export class TodoController{
         AppState.on('account', _drawCreateTodoButton)
         AppState.on('account', this.getTodo)
         AppState.on('todos', _drawTodo)
-        // AppState.on('todos', _drawRemaining)
+        AppState.on('todos', _drawRemaining)
         // this.getPicture()
         // AppState.on('picture', _drawPicture)
         // this.getTodo()
