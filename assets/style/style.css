@@ -1,0 +1,50 @@
+/* BASIC STYLES HERE */
+body{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.bottomPanel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    padding: 2rem;
+    backdrop-filter: blur(80px);
+    background-color: rgba(86, 85, 85, 0.41);
+    color: white;
+    margin-bottom: 0rem;
+
+}
+
+.pictureTag{
+    text-shadow: 0px 0px 10px black;
+    }
+
+.pictureTag:hover + .pictureAuthor{
+    visibility: visible;
+    opacity: 1;
+}
+
+.pictureAuthor{
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(30px);
+    border: 1px rgba(16, 16, 16, 0.283) solid;
+    border-radius: 5px;
+    text-shadow: 0px 0px 8px black;
+
+}
+
+.pictureList{
+    backdrop-filter: blur(80px);
+    border: 1px rgba(212, 210, 210, 0.443) solid;
+    border-radius: 5px;
+    color: white;
+    justify-content: space-evenly;
+    text-shadow: 0px 0px 8px black;
+    /* align-items: center; */
+
+}
