@@ -11,8 +11,10 @@ class ObservableAppState extends EventEmitter {
   values = []
   socketData = []
 
+  sandboxQuote = null
   sandboxPicture = null
   todos = []
+  remaining = []
 
   // Used to load initial data
   init() {

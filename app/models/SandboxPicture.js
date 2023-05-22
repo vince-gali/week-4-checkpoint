@@ -6,7 +6,7 @@ export class SandboxPicture {
         this.imgUrl = data.largeImgUrl
         this.author = data.author
         this.query = data.query
-        this.quote = data.quote
+        this.quote = data.content
         this.tags = data.tags
         this.creatorId = data.creatorId
         this.creator = data.creator
@@ -20,7 +20,7 @@ export class SandboxPicture {
             
 
             <div class="pictureTag pt-5">
-            <h4>"${this.tags}"</h4>
+            <h3>"${this.quote}"</h3>
             </div>
 
             <div class="pictureAuthor">

@@ -31,6 +31,14 @@ function _drawTodo(){
     // setHTML('total', filterTodos.length)
    
 }
+
+// function _drawRemaining(){
+//     let template = /*html*/ ` <div>
+//   Remaining ${AppState.todos.filter(t => t.completed).length}
+//     Todos Remaining: <span id="total">0</span>
+//   </div>`
+//   }
+
 export class TodoController{
     constructor(){
         // console.log('hello from user todo controller');
@@ -38,6 +46,7 @@ export class TodoController{
         AppState.on('account', _drawCreateTodoButton)
         AppState.on('account', this.getTodo)
         AppState.on('todos', _drawTodo)
+        // AppState.on('todos', _drawRemaining)
         // this.getPicture()
         // AppState.on('picture', _drawPicture)
         // this.getTodo()

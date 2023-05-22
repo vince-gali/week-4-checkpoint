@@ -4,15 +4,15 @@ import { api } from "./AxiosService.js";
 
 class SandboxPictureService{
     async getPicture(){
-        const res = await api.get('api/images', + 'api/quotes')
-        console.log('RESPONSE', res.data);
+        const res = await api.get('api/images')
+        // console.log('RESPONSE', res.data);
         AppState.sandboxPicture = new SandboxPicture(res.data)
     }
-    // async getQuote(){
-    //     const res = await api.get('api/quotes')
-    //     console.log('RESPONSE', res.data);
-    //     AppState.sandboxPicture = new SandboxPicture(res.data)
-    // }
+    async getQuote(){
+        const res = await api.get('api/quotes')
+        console.log('RESPONSE', res.data);
+        AppState.sandboxQuote = new SandboxPicture(res.data)
+    }
 }
 
 
